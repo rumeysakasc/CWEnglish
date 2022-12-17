@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "314247480802",
+    "project_id": "writecw-e9237",
+    "storage_bucket": "writecw-e9237.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314247480802:android:61bf03f6293f8c52a665bb",
+        "android_client_info": {
+          "package_name": "com.rorix.cwenglishmain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314247480802-2t41vu03it9ice3e5hqp86l5vfktt1mc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS8WZpvZD8aA3VKyI3M7SRQdaXiq6FFN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314247480802-2t41vu03it9ice3e5hqp86l5vfktt1mc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

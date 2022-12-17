@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "763302372799",
+    "project_id": "cwenglish-9e168",
+    "storage_bucket": "cwenglish-9e168.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763302372799:android:7d38dd1dd33d271d0e2d0a",
+        "android_client_info": {
+          "package_name": "com.rorix.cwenglishmain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763302372799-cm2lg2j1hrlf181ss67f9vc70b47hk0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYATyYa26MGAUJ5Pht7CSd8jKkKKc1qe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763302372799-cm2lg2j1hrlf181ss67f9vc70b47hk0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
