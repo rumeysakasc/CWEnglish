@@ -5,7 +5,7 @@
     <gradient
         android:startColor="#F61616"
         android:endColor="#0080FF"
-        android:type="sweep"/>
+        />
 
     <corners
         android:radius="16dp" />

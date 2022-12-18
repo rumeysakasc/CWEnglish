@@ -17,6 +17,7 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         btnImg1=findViewById(R.id.imageButton6);
         btnImg2=findViewById(R.id.imageButton3);
+        btnImg3=findViewById(R.id.imageButton4);
         btnImg4=findViewById(R.id.imageButton5);
         btnImg1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +30,13 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity2.this,NoteDeatails.class);
+                startActivity(intent);
+            }
+        });
+        btnImg3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity2.this,Voice.class);
                 startActivity(intent);
             }
         });
