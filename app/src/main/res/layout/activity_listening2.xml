@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9484C5"
+    tools:context=".Listening2">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="315dp"
+        android:layout_height="401dp"
+        android:cropToPadding="false"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="50dp"
+        android:padding="10dp"
+        android:paddingStart="-10dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="-500dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        app:srcCompat="@drawable/ps"
+        tools:layout_editor_absoluteY="-39dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <SeekBar
+        android:id="@+id/barS"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="505dp" />
+
+    <TextView
+        android:id="@+id/zmnAk"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="505dp"
+        android:text="0:11" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/play1"
+            android:layout_width="36dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="554dp"
+            android:background="@drawable/ply"
+            app:srcCompat="@drawable/pause"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/previous_bton"
+            android:layout_width="56dp"
+            android:layout_height="46dp"
+            android:background="@drawable/ic_baseline_fast_rewind_24"
+            android:layout_marginTop="-43dp"
+            android:layout_marginLeft="85dp"/>
+        <Button
+            android:id="@+id/next_bton"
+            android:layout_width="56dp"
+            android:layout_height="46dp"
+            android:background="@drawable/ic_baseline_fast_forward_24"
+            android:layout_marginTop="-45dp"
+            android:layout_marginLeft="260dp"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

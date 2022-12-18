@@ -22,7 +22,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnImg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity2.this,Listening.class);
+                Intent intent = new Intent(MainActivity2.this,Listening2.class);
                 startActivity(intent);
             }
         });
@@ -36,14 +36,14 @@ public class MainActivity2 extends AppCompatActivity {
         btnImg3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity2.this,Voice.class);
+                Intent intent = new Intent(MainActivity2.this,Voice2.class);
                 startActivity(intent);
             }
         });
         btnImg4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity2.this,Videos.class);
+                Intent intent = new Intent(MainActivity2.this,Videos2.class);
                 startActivity(intent);
             }
         });
