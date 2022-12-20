@@ -27,8 +27,6 @@ public class NoteDeatails extends AppCompatActivity {
     EditText  textContent;
     ImageButton saveBtn,backBtn;
     ListView listV;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-    HashMap<String, Object> write = new HashMap<>();
     ArrayAdapter<String> adapter;
     ArrayList<String> list = new ArrayList<>();
 

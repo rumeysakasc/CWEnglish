@@ -41,10 +41,7 @@ public class Videos2 extends AppCompatActivity {
         videoList.add("Computer ");
         videoList.add("Computer Device");
         videoList.add("Computer Lesson");
-
-
         adapter=new ArrayAdapter(this, android.R.layout.simple_list_item_1,videoList);
-
         // ListView'ı VideoListAdapter ile bağlama
         listView.setAdapter(adapter);
 
@@ -76,8 +73,9 @@ public class Videos2 extends AppCompatActivity {
                     default:
                         break;
                 }
-                videoView.setMediaController(new MediaController(Videos2.this));
-                videoView.requestFocus();
+                videoView.setMediaController(new MediaController(Videos2.this));//VideoView'in üzerinde oynatma/durdurma,
+                // ses düzeyi veya video ilerleme özelliklerini kontrol etmek için kullanılır.
+                videoView.requestFocus();//dokunmatik kullanım isteği
                 videoView.start();
             }
         });

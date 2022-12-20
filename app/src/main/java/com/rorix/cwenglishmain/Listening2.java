@@ -3,6 +3,7 @@ package com.rorix.cwenglishmain;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.media.MediaParser;
@@ -27,7 +28,7 @@ public class Listening2 extends AppCompatActivity {
     private SeekBar positionBar;
     MediaPlayer mp;
     int totalTime;
-    int[] songs = {R.raw.listening2, R.raw.listening3, R.raw.listen1computer};
+    int[] songs = {R.raw.listen,R.raw.listening2, R.raw.listening3, R.raw.listen1computer};
     int currentSong = 0;
 
     @Override
@@ -52,11 +53,11 @@ public class Listening2 extends AppCompatActivity {
         });
         //Media
 
-        mp=MediaPlayer.create(this,songs[currentSong]);
-        mp.setLooping(true);
-        mp.seekTo(0);
-        mp.setVolume(0.5f,0.5f);
-        totalTime = mp.getDuration();
+        mp=MediaPlayer.create(this,songs[currentSong]);//mediaplayer sınıfını oluşturuyorum
+        mp.setLooping(true);//boolean değer döndürmek için
+        mp.seekTo(0); //zaman çizelgesi üzerinde belli bir milisaniye konumlandırmak için
+        mp.setVolume(0.5f,0.5f);//sağ sol hoparlörin ses düzeyini ayarlamak içiin
+        totalTime = mp.getDuration();//milisaniye sonunda şarkının toplam süreleri gönderilir.
 
 
         ///
@@ -66,20 +67,20 @@ public class Listening2 extends AppCompatActivity {
         positionBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override
-                    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {//SeekBar’ın seviyesi değiştirildiğinde bu metot çalışır.
                         if(fromUser){
-                            mp.seekTo(progress);
-                            positionBar.setProgress(progress);
+                            mp.seekTo(progress);//ilerlemenin değişimi
+                            positionBar.setProgress(progress);//Geçerli ilerlemeyi belirtilen değere ayarlar.görsel olarakta hedefi canlandırır.
                         }
                     }
 
                     @Override
-                    public void onStartTrackingTouch(SeekBar seekBar) {
+                    public void onStartTrackingTouch(SeekBar seekBar) {//SeekBar’ın seviyesi değiştirilmeye başlandığı anda bu metot çalışır.
 
                     }
 
                     @Override
-                    public void onStopTrackingTouch(SeekBar seekBar) {
+                    public void onStopTrackingTouch(SeekBar seekBar) {//SeekBar’ın seviyesi değiştirilmesi durduğu zaman bu metot çağrılır.
 
                     }
 
@@ -91,14 +92,15 @@ public class Listening2 extends AppCompatActivity {
         //Thread//
         new Thread(new Runnable() {
             @Override
-            public void run() {
+            public void run() {// // iş parçacığı çalıştırılırken yapılacak işlemler
                 while(mp != null){
                     try {
                         Message msg= new Message();
-                        msg.what = mp.getCurrentPosition();
+                        msg.what = mp.getCurrentPosition();// Bu metot şarkının geçerli konumunu milisaniye cinsinden döndürür.
+
                         handler.sendMessage(msg);
                         Thread.sleep(1000);
-                    } catch (InterruptedException e){
+                    } catch (InterruptedException e){//bir sorunla karşılaşıldığında burası çalışır.
 
                     }
                 }
@@ -128,7 +130,7 @@ public class Listening2 extends AppCompatActivity {
                 // Şu anda oynatılan müziği durdur
                 mp.stop();
                 // Şu anki müziğin indeksini bir arttır ve mod işlemi ile sıfırdan başa dön
-                currentSong = (currentSong + 1) % songs.length;
+                 currentSong = (currentSong + 1) % songs.length;
                 // Bir sonraki müziği oluştur ve oynat
                 mp = MediaPlayer.create(Listening2.this, songs[currentSong]);
                 mp.start();
@@ -150,6 +152,7 @@ public class Listening2 extends AppCompatActivity {
 
     /////////////////////////
     private Handler handler= new Handler(){
+
         @Override
         public void handleMessage(@NonNull Message msg) {
             int currentPosition =msg.what;
